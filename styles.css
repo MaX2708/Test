@@ -25,9 +25,7 @@ a {
 }
 
 .header {
-  height: 70px;
   background: var(--dark-blue);
-  width: 100%;
 }
 .header__content {
   display: flex;
@@ -52,6 +50,10 @@ a {
 }
 .header_fixed {
   position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  left: 0;
 }
 
 .page-menu {
