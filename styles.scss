@@ -8,16 +8,18 @@
 	--btn-primary-bg-click: #a60c51;
 	--btn-secondary-bg: #465b95;
 	--btn-secondary-bg-click: #364672;
+	--theme-red: #ef2a82;
+	--theme-blue: #0088f0;
 }
 
 * {
 	font-family: Roboto;
+	margin: 0;
+	padding: 0;
 }
 
 body {
 	background: #f8f9ff;
-	margin: 0;
-	padding: 0;
 }
 
 a {
@@ -25,5 +27,26 @@ a {
 	color: initial;
 }
 
+h1 {
+	//styleName: text/H1;
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 60px;
+	text-align: left;
+}
+
+p {
+	//styleName: text/body;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 25.2px;
+	text-align: left;
+}
+
+$header-height: 70px;
+@mixin content-width {
+	max-width: min(100% - 40px, 1180px);
+}
+
 @import "common.blocks/header", "common.blocks/page-menu",
-	"common.blocks/button";
+	"common.blocks/button", "common.blocks/promo-block";
