@@ -32,7 +32,13 @@ h1 {
 	font-size: 50px;
 	font-weight: 700;
 	line-height: 60px;
-	text-align: left;
+}
+
+h2 {
+	//styleName: text/H2;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 48px;
 }
 
 p {
@@ -49,4 +55,6 @@ $header-height: 70px;
 }
 
 @import "common.blocks/header", "common.blocks/page-menu",
-	"common.blocks/button", "common.blocks/promo-block";
+	"common.blocks/button", "common.blocks/promo-block",
+	"common.blocks/features-block", "common.blocks/page-title",
+	"common.blocks/page-text";
