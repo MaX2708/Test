@@ -224,7 +224,7 @@ p {
   flex-direction: column;
   gap: 10px;
   z-index: 2;
-  margin-top: 80px;
+  margin-top: 10vh;
 }
 .promo-block__progressbar-hint {
   font-size: 9.63px;
@@ -293,4 +293,8 @@ p {
   position: absolute;
   top: 0px;
   left: 4vw;
+  height: 58vh;
+}
+.promo-block__other-charts img {
+  height: 100%;
 }/*# sourceMappingURL=styles.css.map */

@@ -93,7 +93,7 @@
 		flex-direction: column;
 		gap: 10px;
 		z-index: 2;
-		margin-top: 80px;
+		margin-top: 10vh;
 	}
 	&__progressbar-hint {
 		font-size: 9.63px;
@@ -163,5 +163,9 @@
 		position: absolute;
 		top: 0px;
 		left: 4vw;
+		height: 58vh;
+	}
+	&__other-charts img {
+		height: 100%;
 	}
 }
