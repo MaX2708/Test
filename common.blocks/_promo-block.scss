@@ -2,13 +2,13 @@
 	&__wrapper {
 		background: var(--dark-blue);
 		margin-top: $header-height;
-		min-height: 80vh;
 		position: relative;
 		overflow: hidden;
+		height: 750px;
 	}
 	&__wrapper::before {
 		content: "";
-		height: calc(25% + 16px);
+		height: 286px;
 		width: 100%;
 		position: absolute;
 		bottom: 0px;
@@ -18,7 +18,7 @@
 	}
 	&__wrapper::after {
 		content: "";
-		height: 25%;
+		height: 270px;
 		width: 100%;
 		position: absolute;
 		bottom: -1px;
@@ -93,7 +93,7 @@
 		flex-direction: column;
 		gap: 10px;
 		z-index: 2;
-		margin-top: 10vh;
+		margin-top: 120px;
 	}
 	&__progressbar-hint {
 		font-size: 9.63px;
@@ -163,7 +163,7 @@
 		position: absolute;
 		top: 0px;
 		left: 4vw;
-		height: 58vh;
+		height: 554px;
 	}
 	&__other-charts img {
 		height: 100%;
