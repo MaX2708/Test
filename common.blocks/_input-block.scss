@@ -1,0 +1,120 @@
+@mixin input-parameters {
+	outline: none;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 14px 20px 14px 20px;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22.4px;
+	border: 2px solid #eeeef6;
+	background: #eeeef6;
+	transition: 0.2s ease-in-out;
+}
+
+.input-block {
+	&__title {
+		//styleName: text/small bold;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 22.4px;
+		color: #252b42;
+		margin-bottom: 14px;
+		width: 100%;
+	}
+	&__field {
+		@include input-parameters;
+		color: var(--dark-blue);
+
+		&::placeholder {
+			color: #8794ba;
+		}
+		&:focus,
+		&:not(:placeholder-shown) {
+			border-color: var(--dark-blue);
+			background: #ffffff;
+		}
+	}
+	&__dropdown {
+		position: relative;
+
+		&-field {
+			@include input-parameters;
+			color: var(--dark-blue);
+			cursor: pointer;
+			background: #eeeef6;
+
+			&::placeholder {
+				color: #8794ba;
+			}
+			&:hover,
+			&:not(:placeholder-shown) {
+				border-color: var(--dark-blue);
+				background: #ffffff;
+			}
+		}
+		&-options {
+			position: absolute;
+			top: 100%;
+			left: 0px;
+			width: 100%;
+			z-index: 99999;
+			background: #fff;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			border: 2px solid #eeeef6;
+			box-shadow: 0px 18px 50px -15px #192a5933;
+			border-radius: 8px;
+			display: flex;
+			flex-direction: column;
+			max-height: 200px;
+			overflow-y: auto;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			display: none;
+		}
+		&-option {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 22.4px;
+			cursor: pointer;
+			padding: 14px 20px 14px 20px;
+			transition: 0.2s ease-in-out;
+			&:hover {
+				background: #eeeef6;
+			}
+			&:active {
+				background: var(--dark-blue);
+				color: #fff;
+			}
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			right: 20px;
+			width: 14px;
+			height: 8px;
+			background: url("images/input-block/vector.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			top: calc(50% - 4px);
+			transition: 0.2s ease-in-out;
+		}
+		&:hover {
+			& .input-block__dropdown-options {
+				display: flex;
+			}
+			&::after {
+				transform: rotateZ(180deg);
+			}
+			& .input-block__dropdown-field {
+				border-color: var(--dark-blue);
+				background: #ffffff;
+			}
+		}
+	}
+}

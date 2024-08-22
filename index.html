@@ -11,6 +11,11 @@
 			rel="stylesheet"
 			href="styles.css"
 		/>
+		<script>
+			function setDropdown(value) {
+				document.getElementById("drop").setAttribute("value", value)
+			}
+		</script>
 	</head>
 	<body>
 		<header class="header header_fixed">
@@ -221,6 +226,107 @@
 							elit. Elementum nisi aliquet volutpat.</span
 						>
 					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="registration-form">
+			<div class="registration-form__wrapper">
+				<div
+					class="registration-form__side registration-form__side_type_map"
+				>
+					<img
+						src="./images/registration-form/map.png"
+						alt=""
+						class="registration-form__map"
+					/>
+				</div>
+				<div class="registration-form__side">
+					<form class="registration-form__inputs">
+						<h2 class="registration-form__form-title">
+							Registration
+						</h2>
+						<div
+							class="input-block registration-form__input-block_width_full"
+						>
+							<p class="input-block__title">Name *</p>
+							<input
+								class="input-block__field"
+								type="text"
+								placeholder="Full Name *"
+								required
+							/>
+						</div>
+						<div
+							class="input-block registration-form__input-block_width_full"
+						>
+							<p class="input-block__title">Departement *</p>
+							<div class="input-block__dropdown">
+								<input
+									id="drop"
+									class="input-block__dropdown-field"
+									readonly
+									required
+									placeholder="Please Select"
+								/>
+								<div class="input-block__dropdown-options">
+									<span
+										class="input-block__dropdown-option"
+										onclick="setDropdown('Europe')"
+									>
+										Europe
+									</span>
+									<span
+										class="input-block__dropdown-option"
+										onclick="setDropdown('Asia')"
+									>
+										Asia
+									</span>
+									<span
+										class="input-block__dropdown-option"
+										onclick="setDropdown('America')"
+									>
+										America
+									</span>
+									<span
+										class="input-block__dropdown-option"
+										onclick="setDropdown('Africa')"
+									>
+										Africa
+									</span>
+								</div>
+							</div>
+						</div>
+						<div
+							class="input-block registration-form__input-block_width_full"
+						>
+							<p class="input-block__title">Email address *</p>
+							<input
+								class="input-block__field"
+								type="email"
+								placeholder="example@gmail.com"
+								required
+							/>
+						</div>
+						<div
+							class="input-block registration-form__input-block_width_full"
+						>
+							<p class="input-block__title">Phone</p>
+							<input
+								class="input-block__field"
+								type="text"
+								placeholder="Phone number"
+							/>
+						</div>
+						<div class="registration-form__submit-btn">
+							<button
+								class="button button_style_main button_primary"
+								type="submit"
+							>
+								<span class="button__text">Sign Up</span>
+							</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
