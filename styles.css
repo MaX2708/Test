@@ -684,6 +684,9 @@ p {
 .card__wrapper_style_white h1, .card__wrapper_style_white h2 {
   color: var(--dark-blue);
 }
+.card__wrapper_style_white .card__splitter {
+  background: #eeeef6;
+}
 .card__title {
   margin-bottom: 10px;
 }
