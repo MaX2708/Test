@@ -697,7 +697,7 @@ p {
 .card__splitter {
   width: 100%;
   height: 1px;
-  background: #eeeef6;
+  background: rgba(238, 238, 246, 0.1);
   margin-top: 40px;
   margin-bottom: 40px;
 }
