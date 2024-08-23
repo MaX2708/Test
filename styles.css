@@ -204,8 +204,8 @@ p {
 }
 @media screen and (max-width: 768px) {
   .button_style_main {
-    width: min(350px, 100%);
-    max-width: 350px;
+    width: min(430px, 100%);
+    max-width: 430px;
   }
 }
 .button_primary {
