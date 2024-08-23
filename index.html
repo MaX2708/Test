@@ -15,6 +15,24 @@
 			function setDropdown(value) {
 				document.getElementById("drop").setAttribute("value", value)
 			}
+			function toggleMenu() {
+				let clList = document.getElementsByClassName(
+					"header__hidden-menu"
+				)[0]?.classList
+				if (clList.contains("header__hidden-menu_show")) {
+					document.body.style.overflow = ""
+					clList.remove("header__hidden-menu_show")
+					document
+						.getElementById("header__burger-btn-icon")
+						.setAttribute("src", "./images/header/burger.png")
+				} else {
+					document.body.style.overflow = "hidden"
+					clList.add("header__hidden-menu_show")
+					document
+						.getElementById("header__burger-btn-icon")
+						.setAttribute("src", "./images/header/close.png")
+				}
+			}
 		</script>
 	</head>
 	<body>
@@ -35,7 +53,7 @@
 						alt="analytics name"
 					/>
 				</a>
-				<nav class="page-menu">
+				<nav class="page-menu header__desktop-elem">
 					<a
 						class="page-menu__link"
 						href="#"
@@ -61,9 +79,58 @@
 						Pricing
 					</a>
 				</nav>
-				<button class="button button_style_main button_secondary">
+				<button
+					class="button header__desktop-elem button_style_main button_secondary"
+				>
 					<span class="button__text">Sign UP</span>
 				</button>
+				<div class="header__mobile-elements">
+					<div
+						class="header__burger-btn"
+						onclick="toggleMenu()"
+					>
+						<img
+							id="header__burger-btn-icon"
+							src="./images/header/burger.png"
+							alt=""
+						/>
+					</div>
+					<div class="header__hidden-menu">
+						<nav class="header__mobile-menu">
+							<a
+								class="header__mobile-menu__link"
+								href="#"
+							>
+								Products
+							</a>
+							<a
+								class="header__mobile-menu__link"
+								href="#"
+							>
+								Features
+							</a>
+							<a
+								class="header__mobile-menu__link"
+								href="#"
+							>
+								Registration
+							</a>
+							<a
+								class="header__mobile-menu__link"
+								href="#"
+							>
+								Pricing
+							</a>
+						</nav>
+						<div class="header__mobile-btn">
+							<button
+								class="button button_style_main button_secondary"
+							>
+								<span class="button__text">Sign UP</span>
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</header>
 

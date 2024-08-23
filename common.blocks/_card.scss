@@ -32,14 +32,18 @@
 				background: #eeeef6;
 			}
 		}
+
+		@media screen and (max-width: 900px) {
+			padding: 40px 20px 50px 20px;
+		}
 	}
 	&__title {
 		margin-bottom: 10px;
 	}
 	&__title-caption {
-		font-size: 18px;
+		font-size: 1.8rem;
 		font-weight: 400;
-		line-height: 25.2px;
+		line-height: 2.52rem;
 		text-align: center;
 		color: var(--text-secondary);
 	}
@@ -49,18 +53,25 @@
 		background: rgba(238, 238, 246, 10%);
 		margin-top: 40px;
 		margin-bottom: 40px;
+		@media screen and (max-width: 900px) {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
 	}
 	&__price {
 	}
 	&__price-caption {
-		font-size: 16px;
+		font-size: 1.6rem;
 		font-weight: 400;
-		line-height: 22.4px;
+		line-height: 2.24rem;
 		text-align: center;
 		color: var(--text-secondary);
 	}
 	&__btn {
 		width: 100%;
 		margin-top: 40px;
+		@media screen and (max-width: 900px) {
+			margin-top: 30px;
+		}
 	}
 }

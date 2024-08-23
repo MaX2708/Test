@@ -10,6 +10,10 @@
 		border: 2px solid transparent;
 		cursor: pointer;
 		transition: 0.2s ease-in-out;
+		@media screen and (max-width: 768px) {
+			width: min(350px, 100%);
+			max-width: 350px;
+		}
 	}
 
 	&_primary {

@@ -1,10 +1,13 @@
 .promo-block {
 	&__wrapper {
 		background: var(--dark-blue);
-		margin-top: $header-height;
+		margin-top: var(--header-height);
 		position: relative;
 		overflow: hidden;
 		height: 750px;
+		@media screen and (max-width: 768px) {
+			height: 100%;
+		}
 	}
 	&__wrapper::before {
 		content: "";
@@ -15,6 +18,9 @@
 		left: 0px;
 		background: var(--theme-red);
 		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 calc(100% - 16px));
+		@media screen and (max-width: 768px) {
+			height: 86px;
+		}
 	}
 	&__wrapper::after {
 		content: "";
@@ -25,6 +31,9 @@
 		left: 0px;
 		background: #f8f9ff;
 		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 calc(100% - 1px));
+		@media screen and (max-width: 768px) {
+			height: 70px;
+		}
 	}
 	&__content {
 		@include content-width;
@@ -32,6 +41,12 @@
 		z-index: 1;
 		display: flex;
 		gap: 5vw;
+		@media screen and (max-width: 768px) {
+			flex-direction: column-reverse;
+			margin-top: 40px;
+			margin-bottom: 120px;
+			gap: 25px;
+		}
 	}
 	&__content > * {
 		flex: 1 1;
@@ -49,6 +64,9 @@
 		width: 41vw;
 		opacity: 7%;
 		pointer-events: none;
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
 	}
 	&__content::after {
 		content: "";
@@ -63,10 +81,19 @@
 		width: 90vw;
 		opacity: 7%;
 		pointer-events: none;
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
 	}
 	&__description {
 		padding-top: 80px;
 		z-index: 1;
+		@media screen and (max-width: 900px) {
+			padding-top: 40px;
+		}
+		@media screen and (max-width: 768px) {
+			padding-top: 0px;
+		}
 	}
 	&__description-title {
 		color: #fff;
@@ -77,6 +104,9 @@
 	}
 	&__description-btn {
 		margin-top: 50px;
+		@media screen and (max-width: 768px) {
+			text-align: center;
+		}
 	}
 	&__charts-preview {
 		position: relative;
@@ -94,11 +124,17 @@
 		gap: 10px;
 		z-index: 2;
 		margin-top: 120px;
+		@media screen and (max-width: 900px) {
+			margin-top: 80px;
+		}
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
 	}
 	&__progressbar-hint {
-		font-size: 9.63px;
+		font-size: 0.963rem;
 		font-weight: 400;
-		line-height: 13.48px;
+		line-height: 1.348rem;
 		color: var(--text-secondary);
 	}
 	&__circle-progressbar-area {
@@ -138,9 +174,9 @@
 		align-items: center;
 	}
 	&__progressbar-percentage {
-		font-size: 23.72px;
+		font-size: 2.372rem;
 		font-weight: 400;
-		line-height: 27.8px;
+		line-height: 2.78rem;
 
 		&_color_red {
 			color: var(--theme-red);
@@ -150,9 +186,9 @@
 		}
 	}
 	&__percentage-hint {
-		font-size: 10.83px;
+		font-size: 1.083rem;
 		font-weight: 400;
-		line-height: 16.25px;
+		line-height: 1.625rem;
 		color: var(--text-secondary);
 	}
 	&__other-charts {
@@ -164,8 +200,21 @@
 		top: 0px;
 		left: 4vw;
 		height: 554px;
+		@media screen and (max-width: 900px) {
+			height: 480px;
+		}
+		@media screen and (max-width: 768px) {
+			position: relative;
+			left: initial;
+			top: initial;
+			height: initial;
+			width: 100%;
+		}
 	}
 	&__other-charts img {
 		height: 100%;
+		@media screen and (max-width: 768px) {
+			width: 100%;
+		}
 	}
 }
