@@ -33,6 +33,10 @@
 		max-width: min(100% - 60px, 430px);
 		margin: 60px auto 60px auto;
 		height: calc(100% - 120px);
+		@media screen and (max-width: 768px) {
+			margin: 30px;
+			height: initial;
+		}
 	}
 	&__input-block {
 		&_width_full {

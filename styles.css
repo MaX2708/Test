@@ -598,6 +598,12 @@ p {
   margin: 60px auto 60px auto;
   height: calc(100% - 120px);
 }
+@media screen and (max-width: 768px) {
+  .registration-form__inputs {
+    margin: 30px;
+    height: initial;
+  }
+}
 .registration-form__input-block_width_full {
   width: 100%;
 }
