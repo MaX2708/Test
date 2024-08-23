@@ -492,6 +492,20 @@
 							</div>
 						</div>
 					</div>
+					<script>
+						document
+							.getElementsByClassName("footer-block__columns")[0]
+							?.scrollTo(
+								(document.getElementsByClassName(
+									"footer-block__columns"
+								)[0]?.scrollWidth -
+									document.getElementsByClassName(
+										"footer-block__columns"
+									)[0]?.clientWidth) /
+									2,
+								0
+							)
+					</script>
 				</div>
 				<div class="footer-block__credits">
 					<a
@@ -509,7 +523,7 @@
 							alt="analytics name footer"
 						/>
 					</a>
-					<nav class="page-menu">
+					<nav class="page-menu footer-block__desktop-menu">
 						<a
 							class="page-menu__link"
 							href="#"
