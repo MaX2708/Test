@@ -160,7 +160,7 @@ p {
 .header__mobile-menu::-webkit-scrollbar {
   display: none;
 }
-.header__mobile-menu__link {
+.header__mobile-link {
   font-size: 28px;
   font-weight: 700;
   line-height: 33.6px;
